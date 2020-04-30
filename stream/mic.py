@@ -13,7 +13,7 @@ fatal_error = False
 
 class MyClient(WebSocketClient):
 
-    def __init__(self, url, mic=1, protocols=None, extensions=None, heartbeat_freq=None, byterate=16000,
+    def __init__(self, url, mic=-1, protocols=None, extensions=None, heartbeat_freq=None, byterate=16000,
                  show_hypotheses=True,
                  save_adaptation_state_filename=None, send_adaptation_state_filename=None, audio_gate=0):
         super(MyClient, self).__init__(url, protocols, extensions, heartbeat_freq)

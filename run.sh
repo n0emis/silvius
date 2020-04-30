@@ -10,7 +10,7 @@ function check_microphone {
     else
         echo "No microphone selected..."
         echo "Finding microphones . . ."
-        python stream/list-mics.py 2>/dev/null
+        python2.7 stream/list-mics.py 2>/dev/null
 
         echo "Use which device?"
         read which
@@ -21,9 +21,9 @@ function check_microphone {
 
 function run_recognition {
     if [[ $1 == 1 ]]; then
-        python stream/mic.py -s silvius-server.voxhub.io -d $which $args | python grammar/main.py
+        python2.7 stream/mic.py -s home.noemis.me -p 8888 -d $which $args | python grammar/main.py
     else
-        python stream/mic.py -s silvius-server.voxhub.io -d $which $args
+        python2.7 stream/mic.py -s home.noemis.me -p 8888 -d $which $args
     fi
 }
 
