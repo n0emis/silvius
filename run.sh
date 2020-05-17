@@ -21,9 +21,9 @@ function check_microphone {
 
 function run_recognition {
     if [[ $1 == 1 ]]; then
-        python2.7 stream/mic.py -s home.noemis.me -p 8888 -d $which $args | python grammar/main.py
+        python2.7 stream/mic.py -s v4-int.goe.de.dyn.n0emis.eu -p 8888 -d $which $args | python grammar/main.py
     else
-        python2.7 stream/mic.py -s home.noemis.me -p 8888 -d $which $args
+        python2.7 stream/mic.py -s v4-int.goe.de.dyn.n0emis.eu -p 8888 -d $which $args
     fi
 }
 
